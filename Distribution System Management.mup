@@ -287,7 +287,8 @@
                           "ideas": {
                             "1": {
                               "title": "search shop on map",
-                              "id": 64
+                              "id": 64,
+                              "ideas": {}
                             },
                             "2": {
                               "title": "select shop from map",
@@ -308,6 +309,10 @@
                                 "4": {
                                   "title": "reward shop",
                                   "id": 69
+                                },
+                                "5": {
+                                  "title": "print",
+                                  "id": 79
                                 }
                               }
                             },
@@ -328,14 +333,98 @@
                                       "id": 73
                                     }
                                   }
+                                },
+                                "2": {
+                                  "title": "agents/supervisors",
+                                  "id": 82
+                                },
+                                "3": {
+                                  "title": "shops",
+                                  "id": 92
                                 }
                               }
+                            },
+                            "4": {
+                              "title": "search agent/supervisor",
+                              "attr": {
+                                "style": {
+                                  "background": "#E0E0E0"
+                                }
+                              },
+                              "id": 94
+                            },
+                            "5": {
+                              "title": "select agent/supervisor",
+                              "id": 83,
+                              "ideas": {
+                                "1": {
+                                  "title": "set target",
+                                  "id": 84
+                                },
+                                "2": {
+                                  "title": "agent/supervisor performance",
+                                  "id": 85,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "auto evaluation",
+                                      "id": 86,
+                                      "ideas": {
+                                        "1": {
+                                          "title": "on target reach",
+                                          "id": 88
+                                        },
+                                        "2": {
+                                          "title": "timely payment",
+                                          "id": 89
+                                        }
+                                      }
+                                    },
+                                    "2": {
+                                      "title": "manual evaluation",
+                                      "id": 87,
+                                      "ideas": {
+                                        "1": {
+                                          "title": "official rating/comment",
+                                          "id": 90
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "15": {
+                              "title": "print",
+                              "id": 80
                             }
                           }
                         }
                       }
                     }
                   }
+                },
+                "2": {
+                  "title": "notification broadcast",
+                  "id": 76
+                },
+                "3": {
+                  "title": "send/receive message ",
+                  "id": 78
+                },
+                "4": {
+                  "title": "add agent/supervisor",
+                  "id": 95,
+                  "ideas": {
+                    "1": {
+                      "title": "add area covered by agent/supervisor (using google map)",
+                      "id": 96
+                    }
+                  }
+                },
+                "5": {
+                  "title": "add area",
+                  "id": 97,
+                  "ideas": {}
                 }
               },
               "attr": {
