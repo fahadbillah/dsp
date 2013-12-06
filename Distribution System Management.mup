@@ -1,0 +1,442 @@
+{
+  "title": "Distribution System Management",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Mobile application (for field use)",
+      "id": 2,
+      "ideas": {
+        "3": {
+          "title": "authentication",
+          "id": 59,
+          "ideas": {
+            "1": {
+              "title": "admin panel",
+              "id": 58,
+              "ideas": {
+                "1": {
+                  "title": "inventory management",
+                  "id": 6,
+                  "ideas": {
+                    "1": {
+                      "title": "amount sold",
+                      "id": 13,
+                      "ideas": {
+                        "1": {
+                          "title": "money debit",
+                          "id": 17
+                        },
+                        "2": {
+                          "title": "money credit",
+                          "id": 18
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "amount in stock",
+                      "id": 14
+                    },
+                    "0.5": {
+                      "title": "product list",
+                      "id": 20,
+                      "ideas": {
+                        "4": {
+                          "title": "Pid",
+                          "id": 24
+                        },
+                        "5": {
+                          "title": "Pdetails",
+                          "id": 25
+                        },
+                        "15": {
+                          "title": "availability",
+                          "id": 22
+                        },
+                        "25": {
+                          "title": "current price",
+                          "id": 21
+                        },
+                        "4.5": {
+                          "title": "Pname",
+                          "id": 23
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "sell",
+                  "id": 45,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "frequently used thats why on the app homepage"
+                    },
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "earn",
+                  "id": 46,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "frequently used thats why on the app homepage"
+                    },
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "company comunication",
+                  "id": 48,
+                  "ideas": {
+                    "1": {
+                      "title": "notification ",
+                      "id": 50
+                    },
+                    "2": {
+                      "title": "sending/receiving message/email",
+                      "id": 51
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "0.5": {
+                  "title": "shop management",
+                  "id": 5,
+                  "ideas": {
+                    "1": {
+                      "title": "add new shop",
+                      "id": 9,
+                      "ideas": {
+                        "1": {
+                          "title": "Sname",
+                          "id": 26
+                        },
+                        "2": {
+                          "title": "Scontact",
+                          "id": 27,
+                          "ideas": {
+                            "1": {
+                              "title": "phone no.",
+                              "id": 29
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Slocation",
+                          "id": 28,
+                          "ideas": {
+                            "1": {
+                              "title": "google map (with exact latitude, longitude taken from mobile's gps)",
+                              "id": 31
+                            },
+                            "2": {
+                              "title": "address",
+                              "id": 32
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "shop image",
+                          "id": 75
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "edit shop info",
+                      "id": 10
+                    },
+                    "3": {
+                      "title": "communicate with shop owner  through sms",
+                      "id": 11
+                    },
+                    "4": {
+                      "title": "shop business info",
+                      "id": 33,
+                      "ideas": {
+                        "3": {
+                          "title": "shop performances",
+                          "id": 37,
+                          "ideas": {
+                            "1": {
+                              "title": "auto evaluation",
+                              "id": 38,
+                              "ideas": {
+                                "1": {
+                                  "title": "timely payment",
+                                  "id": 40
+                                },
+                                "2": {
+                                  "title": "on sale target reach",
+                                  "id": 41
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "manual evaluation",
+                              "id": 39,
+                              "ideas": {
+                                "1": {
+                                  "title": "field agents/supervisors rating and comment",
+                                  "id": 42
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "0.5": {
+                          "title": "current deals",
+                          "id": 43
+                        },
+                        "1.75": {
+                          "title": "business history",
+                          "id": 44,
+                          "ideas": {
+                            "1": {
+                              "title": "last deals",
+                              "id": 34,
+                              "attr": {
+                                "style": {
+                                  "background": "#E0E0E0"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "last money transactions",
+                              "id": 36,
+                              "attr": {
+                                "style": {
+                                  "background": "#E0E0E0"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                },
+                "0.25": {
+                  "title": "users",
+                  "id": 4,
+                  "ideas": {
+                    "1": {
+                      "title": "field agents",
+                      "id": 7
+                    },
+                    "2": {
+                      "title": "field supervisors",
+                      "id": 8
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#E0E0E0"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "-1": {
+      "title": "Web application (for office use)",
+      "id": 3,
+      "ideas": {
+        "2": {
+          "title": "authentication",
+          "id": 53,
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          },
+          "ideas": {
+            "1": {
+              "title": "admin panel",
+              "id": 52,
+              "ideas": {
+                "1": {
+                  "title": "summary",
+                  "id": 60,
+                  "ideas": {
+                    "1": {
+                      "title": "area base summary (selectarea)",
+                      "id": 61,
+                      "ideas": {
+                        "1": {
+                          "title": "google map with different type of layering",
+                          "id": 62,
+                          "ideas": {
+                            "1": {
+                              "title": "search shop on map",
+                              "id": 64,
+                              "ideas": {}
+                            },
+                            "2": {
+                              "title": "select shop from map",
+                              "id": 65,
+                              "ideas": {
+                                "1": {
+                                  "title": "shop details",
+                                  "id": 66
+                                },
+                                "2": {
+                                  "title": "shop business details",
+                                  "id": 67
+                                },
+                                "3": {
+                                  "title": "shop performance/evaluations",
+                                  "id": 68
+                                },
+                                "4": {
+                                  "title": "reward shop",
+                                  "id": 69
+                                },
+                                "5": {
+                                  "title": "print",
+                                  "id": 79
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "map layers",
+                              "id": 70,
+                              "ideas": {
+                                "1": {
+                                  "title": "current sold",
+                                  "id": 71,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "debit",
+                                      "id": 72
+                                    },
+                                    "2": {
+                                      "title": "credit",
+                                      "id": 73
+                                    }
+                                  }
+                                },
+                                "2": {
+                                  "title": "agents/supervisors",
+                                  "id": 82
+                                },
+                                "3": {
+                                  "title": "shops",
+                                  "id": 92
+                                }
+                              }
+                            },
+                            "4": {
+                              "title": "search agent/supervisor",
+                              "attr": {
+                                "style": {
+                                  "background": "#E0E0E0"
+                                }
+                              },
+                              "id": 94
+                            },
+                            "5": {
+                              "title": "select agent/supervisor",
+                              "id": 83,
+                              "ideas": {
+                                "1": {
+                                  "title": "set target",
+                                  "id": 84
+                                },
+                                "2": {
+                                  "title": "agent/supervisor performance",
+                                  "id": 85,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "auto evaluation",
+                                      "id": 86,
+                                      "ideas": {
+                                        "1": {
+                                          "title": "on target reach",
+                                          "id": 88
+                                        },
+                                        "2": {
+                                          "title": "timely payment",
+                                          "id": 89
+                                        }
+                                      }
+                                    },
+                                    "2": {
+                                      "title": "manual evaluation",
+                                      "id": 87,
+                                      "ideas": {
+                                        "1": {
+                                          "title": "official rating/comment",
+                                          "id": 90
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "15": {
+                              "title": "print",
+                              "id": 80
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "notification broadcast",
+                  "id": 76
+                },
+                "3": {
+                  "title": "send/receive message ",
+                  "id": 78
+                },
+                "4": {
+                  "title": "add agent/supervisor",
+                  "id": 95,
+                  "ideas": {
+                    "1": {
+                      "title": "add area covered by agent/supervisor (using google map)",
+                      "id": 96
+                    }
+                  }
+                },
+                "5": {
+                  "title": "add area",
+                  "id": 97,
+                  "ideas": {}
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#E0E0E0"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": []
+}
