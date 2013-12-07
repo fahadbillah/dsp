@@ -4,30 +4,36 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>jQuery Mobile: Theme Download</title>
+		<title>DistriBrute</title>
 		<link rel="stylesheet" href="themes/ds.min.css" />
 		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 		<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.0-rc.1.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
-		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery.mobile-1.4.0-rc.1.min.js"></script>
 	</head>
 	<body>
-		<div data-role="page" data-theme="a">
+		<div data-role="page">
 			<div data-role="header" data-position="inline" data-fullscreen="true">
-				<h1>DISTRIBRUTE</h1>
-				<a class="ui-btn-right">Back</a>
+				<h1><img class="headerLogo" src="img/final.png" alt="DISTRIBRUTE" height="33"></h1>
+				<a data-role="button" class="ui-btn-left" href="http://localhost/dsp/app/" data-icon="home">Home</a>
+				<a data-role="button" class="ui-btn-right" href="#" data-icon="gear">Option</a>
+				<!-- <a class="ui-btn-right">Back</a> -->
 			</div>
-			<div data-role="navbar">
+			<div data-role="content">
+		    <!-- <label for="searchShop">Search Shop:</label> -->
+		    <input type="search" name="searchShop" id="searchShop" value="" placeholder="Search shop" />
+			</div>
+			<!-- <div data-role="navbar">
 				<ul>
 					<li> <a href="#" data-icon="home"></a> </li>
 					<li> <a href="#" data-icon="gear"></a> </li>
-				</ul>
-			</div>
-			<div data-role="content" data-theme="a">
+				</ul> 
+			</div>-->
+			<div data-role="content" data-theme="a" class="homeContentArea">
 				<div id="map" class="mapStyle"></div>
 			</div>
-			<div data-role="footer" class="ui-bar">Show Ad.</div>
+			<div data-role="footer" class="ui-bar">Notification Bar.</div>
 		</div>
 	</body>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVJq-MFkpNegyTZvEk1m8UBrHLmK5gjSA&sensor=false"></script>
@@ -50,7 +56,6 @@
 		  	alert('Geolocation is not supported!')
 		}
     var initialize = function(position) {
-    	//var currPos = currentLocation()
     	if(position){
     		/*var styles = [
 		    {
@@ -84,7 +89,11 @@
 	      };
     		//	disableDefaultUI: true,
 	      
-	      var homeIcon = 'themes/images/icons-png/home-black.png'
+	      //var homeIcon = 'themes/images/icons-png/home-black.png'
+	      var homeIcon = {
+				  url: 'themes/images/icons-png/home-black.png',
+				  scaledSize: new google.maps.Size(25, 25)
+				};
 	      
 	      map = new google.maps.Map(document.getElementById("map"),mapOptions);
 	      console.log(myLatlng)	      
@@ -94,7 +103,8 @@
 		      '</div>'+
 		      '<h3 id="firstHeading" class="firstHeading">YOU</h3>'+
 		      '<div id="bodyContent">'+
-		      '<p><b>you</b>, are here '+
+		      '<p><b>you</b>, are here <br>'+
+		      '<a href="externalpages/addshop.html" data-transition="slide">Add Shop</a>'+
 		      '</div>'+
 		      '</div>';
 
@@ -102,6 +112,8 @@
 			    position: myLatlng,
 			    map: map,
 			    animation: google.maps.Animation.DROP,
+			    icon:homeIcon,
+			    draggable:true,
 			    title:"Hello World!"
 				});
 

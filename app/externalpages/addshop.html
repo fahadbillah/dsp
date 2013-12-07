@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Add Shop</title>
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<div data-role="page">
+			<div data-role="header" data-position="inline" data-fullscreen="true">
+				<h1><img class="headerLogo" src="../img/final.png" alt="DISTRIBRUTE" height="33"></h1>
+				<a data-role="button" data-transition="slide" data-direction="reverse" class="ui-btn-left" href="http://localhost/dsp/app/" data-icon="home">Home</a>
+				<a data-role="button" class="ui-btn-right" href="#" data-icon="gear">Option</a>
+				<!-- <a class="ui-btn-right">Back</a> -->
+			</div>
+			<div data-role="content">
+		    <!-- <label for="searchShop">Search Shop:</label> -->
+		    <input type="search" name="searchShop" id="searchShop" value="" placeholder="Search shop" />
+			</div>
+			<div data-role="content" class="addShopContentArea">
+				<form action="" method="post" accept-charset="utf-8">
+					<label for="shopName">Input Shop Name:</label>
+					<input name="shopName" id="shopName" placeholder="">
+					<hr>
+					<label for="shopOwner">Input Shop Owner Name:</label>
+					<input name="shopOwner" id="shopOwner" placeholder="">
+					<hr>
+					<label for="shopContact">Input Contact No.:</label>
+					<input name="shopContact" id="shopContact" placeholder="">
+					<hr>
+					<label for="shopRegNo">Input Registration No.:</label>
+					<input name="shopRegNo" id="shopRegNo" placeholder="">
+					<hr>
+					<label for="shopAddres">Shop Address:</label>
+					<textarea name="shopAddres" id="shopAddres"></textarea>
+					<hr>
+					<label for="shopDetails">Shop Details:</label>
+					<textarea name="shopDetails" id="shopDetails"></textarea>
+					<hr>
+					<input type="button" name="shopSubmit" id="shopSubmit" value="Submit">
+				</form>
+			</div>
+			<div data-role="footer" class="ui-bar">Notification Bar.</div>
+		</div>
+		<script type="text/javascript">
+		
+		</script>
+	</body>
+</html>

@@ -1,3 +1,25 @@
 .mapStyle{
-	height: 300px;
+	height: 443px;
+}
+
+.headerLogo{
+	/*padding: 0px 0px 2px 0px;*/
+}
+
+.ui-title{
+	padding-top: 4px !important;
+	padding-bottom: 0px !important;
+}
+
+.homeContentArea{
+	border-top-width: 1px;
+	height: 443px;
+}
+.addShopContentArea{
+	border: 1px solid;
+	height: 440px;
+}
+
+.formArea{
+	overflow:auto;	
 }
