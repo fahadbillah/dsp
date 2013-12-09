@@ -10,12 +10,10 @@
 		<div data-role="page">
 			<div data-role="header" data-position="inline" data-fullscreen="true">
 				<h1><img class="headerLogo" src="../img/final.png" alt="DISTRIBRUTE" height="33"></h1>
-				<a data-role="button" data-transition="slide" data-direction="reverse" class="ui-btn-left" href="http://localhost/dsp/app/" data-icon="home">Home</a>
-				<a data-role="button" class="ui-btn-right" href="#" data-icon="gear">Option</a>
-				<!-- <a class="ui-btn-right">Back</a> -->
+				<a href="../index.html" data-role="button" data-direction="reverse" data-transition="slide" data-icon="home" data-iconpos="notext">Home</a>
+				<a href="externalpages/settings.html" data-role="button" data-icon="gear" data-iconpos="notext">Settings</a>
 			</div>
 			<div data-role="content">
-		    <!-- <label for="searchShop">Search Shop:</label> -->
 		    <input type="search" name="searchShop" id="searchShop" value="" placeholder="Search shop" />
 			</div>
 			<div data-role="content" class="addShopContentArea">
@@ -42,9 +40,51 @@
 				</form>
 			</div>
 			<div data-role="footer" class="ui-bar">Notification Bar.</div>
+			<script type="text/javascript">
+				var notify = {
+					theme: 'a',
+					transition: 'pop'
+				}
+		    $("#shopSubmit").click(function(){
+					var form = $('form');
+					//alert(JSON.stringify(form))
+					var url = location.search.substr(1);
+					//url = url.split('-');
+					var formData = {
+						'name': $('#shopName').val(),
+						'address': $('#shopAddres').val(),
+						'registration': $('#shopRegNo').val(),
+						'latlong': url,
+						'owner': $('#shopOwner').val(),
+						'contact': $('#shopContact').val(),
+						'details': $('#shopDetails').val(),
+						'addShop': true,
+					};
+
+					console.log(url);
+					console.log(formData);
+					$.post( "../phpscripts/addshop.php",formData, function( data ) {
+						console.log(data);
+					  //$( ".result" ).html( data );
+					  if(data.indexOf('failed')>=0){
+					  	//alert("<p class='error'>"+data+"</>")
+					  	$( "#notify" ).text('');
+					  	$( "#notify" ).text( data );
+					  	$( "#notify" ).removeClass();
+					  	$( "#notify" ).addClass('error');
+					  	$( "#notify" ).popup( "open" );
+					  }
+					  else if(data.indexOf('successfully')>=0){
+					  	//alert("<p class='success'>"+data+"</>")
+					  	$( "#notify" ).text('');
+					  	$( "#notify" ).text( data );
+					  	$( "#notify" ).removeClass();
+					  	$( "#notify" ).addClass('success');
+					  	$( "#notify" ).popup( "open" );
+					  }
+					});
+				});
+			</script>
 		</div>
-		<script type="text/javascript">
-		
-		</script>
 	</body>
 </html>

@@ -16,24 +16,18 @@
 		<div data-role="page">
 			<div data-role="header" data-position="inline" data-fullscreen="true">
 				<h1><img class="headerLogo" src="img/final.png" alt="DISTRIBRUTE" height="33"></h1>
-				<a data-role="button" class="ui-btn-left" href="http://localhost/dsp/app/" data-icon="home">Home</a>
-				<a data-role="button" class="ui-btn-right" href="#" data-icon="gear">Option</a>
-				<!-- <a class="ui-btn-right">Back</a> -->
+				<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+				<a href="externalpages/addshop.html" data-transition="slide" data-role="button" data-icon="gear" data-iconpos="notext">Add Shop</a>
+				<!-- <a href="externalpages/settings.html" data-role="button" data-icon="gear" data-iconpos="notext">Settings</a> -->
 			</div>
 			<div data-role="content">
-		    <!-- <label for="searchShop">Search Shop:</label> -->
 		    <input type="search" name="searchShop" id="searchShop" value="" placeholder="Search shop" />
 			</div>
-			<!-- <div data-role="navbar">
-				<ul>
-					<li> <a href="#" data-icon="home"></a> </li>
-					<li> <a href="#" data-icon="gear"></a> </li>
-				</ul> 
-			</div>-->
 			<div data-role="content" data-theme="a" class="homeContentArea">
 				<div id="map" class="mapStyle"></div>
 			</div>
 			<div data-role="footer" class="ui-bar">Notification Bar.</div>
+			<div data-role="popup" id="notify"></div>
 		</div>
 	</body>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVJq-MFkpNegyTZvEk1m8UBrHLmK5gjSA&sensor=false"></script>
@@ -50,6 +44,12 @@
 			return position
 		}
 		var currentLocation = function(){
+			if (navigator.geolocation)
+		    navigator.geolocation.getCurrentPosition(initialize);
+		  else
+		  	alert('Geolocation is not supported!')
+		}
+		var instantLocation = function(){
 			if (navigator.geolocation)
 		    navigator.geolocation.getCurrentPosition(initialize);
 		  else
@@ -80,6 +80,9 @@
 		  ];
 		  	var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});*/
 
+		  	var lat = encodeURI(position.coords.latitude);
+		  	var lon = encodeURI(position.coords.longitude);
+
 		  	myLatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
 	      mapOptions = {
@@ -104,7 +107,7 @@
 		      '<h3 id="firstHeading" class="firstHeading">YOU</h3>'+
 		      '<div id="bodyContent">'+
 		      '<p><b>you</b>, are here <br>'+
-		      '<a href="externalpages/addshop.html" data-transition="slide">Add Shop</a>'+
+		      '<a href="externalpages/addshop.html?'+lat+'-'+lon+'" data-transition="slide">Add Shop</a>'+
 		      '</div>'+
 		      '</div>';
 
@@ -117,6 +120,42 @@
 			    title:"Hello World!"
 				});
 
+				var getShopList = {
+					'getType': 'allShopForMap'
+				}
+				$.post('phpscripts/getshop.php',getShopList,function(data){
+				  if(data.indexOf('Error')>=0){
+				  	//alert("<p class='error'>"+data+"</>")
+				  	$( "#notify" ).text('');
+				  	$( "#notify" ).text( data );
+				  	$( "#notify" ).removeClass();
+				  	$( "#notify" ).addClass('error');
+				  	$( "#notify" ).popup( "open" );
+				  	preventDefault();
+				  }
+					console.log(JSON.parse(data));
+					data = JSON.parse(data);
+					var shopsOnMap;
+					for(var i=0;i<data.length;i++){
+						var shopId = data[i].id;
+						var shopName = data[i].name;
+						var shopll = data[i].latlong;
+						shopll = shopll.split('-');
+
+		  			var shopsLatlng = new google.maps.LatLng(shopll[0], shopll[1]);
+
+						var mapShop = new google.maps.Marker({
+					    position: shopsLatlng,
+					    map: map,
+					    animation: google.maps.Animation.DROP,
+					    title: shopName
+						},function(markerData){
+							shopsOnMap.push(markerData);
+							console.log(markerData);
+						});
+					}
+				})
+
 			  infowindow = new google.maps.InfoWindow({
 		      content: contentString
 			  });
@@ -126,11 +165,19 @@
 			    console.log('click event should work')
 			  });
 				
+
+				google.maps.event.addListener(marker, 'drag', function() {
+			    infowindow.close(map,marker);
+			    infowindow.open(map,marker);
+			    console.log('click event should work')
+			  });
+				
       }
       else
       	alert('Google Map is not working!')
     }
     google.maps.event.addDomListener(window, 'load', currentLocation);
+
   </script>
 </html>
 <!-- <p>Your theme was successfully downloaded. You can use this page as a reference for how to link it up!</p>

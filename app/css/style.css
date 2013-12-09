@@ -23,3 +23,11 @@
 .formArea{
 	overflow:auto;	
 }
+
+.error{
+	background-color: #f34a53;
+}
+
+.success{
+	background-color: #437356;
+}
